@@ -9,7 +9,21 @@ public class Var {
 
   System.out.println("My Number is: " + myNumber); // Print myNumber
 System.out.println("Your Number is: " + yourNumber); // Print yourNumber
+
+  boolean isVeg = false;
+  System.out.print(isVeg);
+
+
+
+  String wises = "Good MOrning";
+  System.out.print(wises);
+
+
+  char myChar = 'K';
+  
   }
 }
+
+
 
 

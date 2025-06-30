@@ -1,4 +1,4 @@
- import java.lang.*;
+ //import java.lang.*;
 // package PART1.LAC2;
 
 public class FirstProgram {
