@@ -1,2 +1,2 @@
-# JAVA-2025-Pra_si
+# JAVA-2025-Prashnat_sir
 WE PUT SOME NOTE OF JAVA
