@@ -1,0 +1,5 @@
+propertiex => Instance variables
+Methode => Instamce Methods
+
+
+Attribute is also called a properties => Instance variables
