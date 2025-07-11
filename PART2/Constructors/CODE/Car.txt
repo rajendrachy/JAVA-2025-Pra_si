@@ -1,0 +1,58 @@
+//1.------------------🔹 Default Constructor---------------
+------------------A constructor with no parameters.------------
+
+Java provides it automatically if no constructors are defined.
+Used to create objects with default values.
+
+class Car {
+    Car() {
+        // default constructor
+        System.out.println("Default constructor called");
+    }
+}
+
+//--------------✅ Key Points:---------------------
+No arguments.
+Automatically created by Java if none is defined.
+You can also define it explicitly.
+
+
+
+
+
+//2.---------------------🔹 Parameterized Constructor-------------------
+A constructor that takes arguments.
+Used to initialize objects with custom values.
+
+
+class Car {
+    Car(String color, int wheels) {
+        // parameterized constructor
+        System.out.println("Color: " + color + ", Wheels: " + wheels);
+    }
+}
+
+
+//-----------------✅ Key Points:----------------
+Takes parameters to assign values.
+Helps in creating customized objects.
+
+
+If you define any constructor, Java won't provide the default constructor.
+
+//---------------------🔁 Example Using Both:------------------
+
+class Car {
+    Car() {
+        System.out.println("Default Constructor");
+    }
+
+    Car(String color) {
+        System.out.println("Parameterized Constructor: " + color);
+    }
+}
+
+
+
+
+
