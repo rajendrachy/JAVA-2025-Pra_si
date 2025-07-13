@@ -1,0 +1,2 @@
+Primitive data type is always store in the Stack
+and Non premitive data Type is always store in the Heap;
