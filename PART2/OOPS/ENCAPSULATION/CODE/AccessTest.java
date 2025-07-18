@@ -1,4 +1,4 @@
-package PART2.OOPS.CODE;
+package PART2.OOPS.ENCAPSULATION.CODE;
 
 public class AccessTest {
   public static void main(String[] args) {
@@ -11,3 +11,5 @@ public class AccessTest {
     System.out.println(newCar);
   }
 }
+
+

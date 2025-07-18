@@ -1,4 +1,4 @@
-package PART2.OOPS.CODE;
+package PART2.OOPS.ENCAPSULATION.CODE;
 
 public class Car {
   public String color;
