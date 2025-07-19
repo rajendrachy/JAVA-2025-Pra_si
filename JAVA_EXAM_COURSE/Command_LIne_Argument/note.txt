@@ -1,0 +1,84 @@
+----------------- Command-Line Arguments in Java---------------------------
+In Java, command-line arguments are parameters passed to your program when it's run from the terminal or command prompt.
+These arguments are stored in the String[] args array passed to the main() method:
+
+
+public class MyProgram {
+    public static void main(String[] args) {
+
+        // Print all command-line arguments
+        for (int i = 0; i < args.length; i++) {
+            System.out.println("Argument " + i + ": " + args[i]);
+        }
+    }
+}
+
+
+
+
+
+-------------------------Example:----------------------------------
+1.----------------- Compile the Program----------------------
+javac MyProgram.java
+
+
+2.--------------------- Run the Program with Arguments--------------------------
+java MyProgram hello 123 world
+
+
+3. ------------Output------------------
+Argument 0: hello
+Argument 1: 123
+Argument 2: world
+
+
+
+------------------- Notes:--------------------
+args.length tells you how many arguments were passed.
+All command-line arguments are Strings.
+
+-------------You need to convert them if you want numeric types:------------------
+int number = Integer.parseInt(args[0]);
+
+
+
+
+
+
+
+
+
+
+ -------------------Example Program: Parse and Print an Integer-----------------
+
+public class ParseNumber {
+    public static void main(String[] args) {
+        if (args.length == 0) {
+            System.out.println("Please provide a number as a command-line argument.");
+            return;
+        }
+
+        int number = Integer.parseInt(args[0]);
+        System.out.println("You entered: " + number);
+    }
+}
+
+
+
+▶----------------- How to Run:---------------------
+----------------Step 1: Compile the program------------------------
+javac ParseNumber.java
+
+
+
+--------------Step 2: Run with a number-----------------
+------------=> java ParseNumber 42
+
+-----------Output:--------------
+You entered: 42
+
+
+
+
+
+
