@@ -1,0 +1,100 @@
+--------------------- Identifiers in Java - Full Notes--------------------
+✅ 1. What is an Identifier?
+An identifier is the name used to identify:
+
+Classes
+Interfaces
+Methods
+Variables
+Labels
+Packages, etc.
+
+
+
+-------------------Example:--------------------
+int age = 25;
+Here, age is the identifier.
+
+
+----------------------- 2. Rules for Naming Identifiers-------------------------
+Java has strict rules for creating valid identifiers:
+
+-------------Rule	Description	Example---------------
+1	Can use letters (A–Z, a–z), digits (0–9), underscore _, and dollar sign $	myVar, num1, _data, $value
+2	Cannot start with a digit	❌ -> 1value (invalid)
+3	Cannot use Java keywords/reserved words	❌ class, int, if
+4	Case-sensitive	MyVar ≠ myvar
+5	No special characters (@, #, !, etc.) allowed except _ and $	❌ value@
+
+
+
+
+
+
+-----------------3. Naming Conventions (Best Practices)-------------------
+Although not enforced by the compiler, Java developers follow certain naming conventions for readability and maintainability:
+
+--------------Element	Convention	Example------------
+Class	PascalCase	StudentDetails, BankAccount
+Interface	PascalCase	Runnable, Serializable
+Method	camelCase	calculateTotal(), getName()
+Variable	camelCase	studentName, totalMarks
+Constant	UPPERCASE_WITH_UNDERSCORES	MAX_SPEED, PI_VALUE
+Package	lowercase	com.company.project
+
+
+
+
+------------------ 4. Invalid Identifier Examples-------------------
+Here are examples that will cause compile-time errors:
+
+------------Invalid Identifier	Reason------------
+int	           Reserved keyword
+2ndNumber	     Starts with a digit
+user-name	     Contains - (illegal character)
+@value	       Contains illegal character @
+null	        Reserved literal
+
+------------------ 5. Examples---------------------
+class MyClass {
+    int rollNumber = 101; // Valid
+    String studentName = "Alice"; // Valid
+    
+    void displayDetails() { // Valid
+        System.out.println(studentName);
+    }
+}
+
+
+
+------------------ 6. Reserved Keywords (Cannot be used as identifiers)------------------
+Some of Java's 50+ keywords:
+abstract, assert, boolean, break, byte,
+case, catch, char, class, const,
+continue, default, do, double, else,
+enum, extends, final, finally, float,
+for, goto, if, implements, import,
+instanceof, int, interface, long, native,
+new, null, package, private, protected,
+public, return, short, static, strictfp,
+super, switch, synchronized, this, throw,
+throws, transient, try, void, volatile, while
+Note: const and goto are reserved but not used.
+
+
+
+
+
+--------------Summary-------------------
+Feature                                       	Valid?
+Begins with a letter, _, or $	                   ✅
+Contains digits after first character           	✅
+Starts with digit	                               ❌
+Uses Java keyword	                                ❌
+Contains special character like @	               ❌
+Case-sensitive	                                ✅
+
+
+
+
+
