@@ -9,3 +9,9 @@ public class InheritanceTest {
         bike.commute();
     }
 }
+
+
+
+//-------------compile and run execute from root ------------------ 
+// javac -d . PART2/OOPS/INHERITANCE/CODE/*.java
+// java PART2.OOPS.INHERITANCE.CODE.InheritanceTest
