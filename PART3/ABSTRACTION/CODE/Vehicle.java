@@ -1,7 +1,11 @@
 package PART3.ABSTRACTION.CODE;
 
-public class Vehicle {
+public abstract class Vehicle {
    private int noOFTires;
+
+
+
+   public abstract void makeStartSound();
 
    public Vehicle(int noOFTires) {
        this.noOFTires = noOFTires;
