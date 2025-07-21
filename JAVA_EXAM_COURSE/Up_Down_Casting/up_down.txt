@@ -1,0 +1,26 @@
+
+//--------------Doen Casting------------
+int a = (int) 10.0; // Downcasting from double to int
+System.out.println(a); // Output: 10
+
+
+
+
+
+//----------------Up-Casting--------------------
+public class UpcastingExample {
+    public static void main(String[] args) {
+        int a = 10;
+        float b = a; // Upcasting from int to float (automatic)
+        
+        System.out.println("Integer value: " + a);   // Output: 10
+        System.out.println("Float value: " + b);     // Output: 10.0
+    }
+}
+
+
+float b = 10; // upcasting
+System.out.println(b); // Output: 10.0
+
+
+
