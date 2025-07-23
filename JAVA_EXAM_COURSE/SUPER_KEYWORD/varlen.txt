@@ -1,0 +1,62 @@
+✅ Variable-Length Arguments in Java (Varargs)
+In Java, variable-length arguments, also called varargs, allow you to pass a variable number of arguments to a method.
+
+This is useful when you don’t know in advance how many arguments a method will receive.
+
+
+
+
+
+🔹 Syntax:
+returnType methodName(type... variableName)
+The ... means "zero or more arguments of this type."
+
+Internally, the varargs parameter is treated as an array.
+
+
+
+
+
+
+✅ Example:
+public class VarArgsExample {
+
+    // Method that accepts variable-length int arguments
+    public static void printNumbers(int... numbers) {
+        for (int num : numbers) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        printNumbers();              // No arguments
+        printNumbers(1);             // One argument
+        printNumbers(1, 2, 3, 4, 5); // Multiple arguments
+    }
+}
+🔸 Output:
+ 
+1 
+1 2 3 4 5 
+
+
+
+
+
+
+
+
+✅ Rules for Varargs:
+Only one varargs parameter per method.
+
+It must be the last parameter in the method.
+
+🔴 Invalid Example (Varargs not last):
+
+// ❌ This will cause a compile-time error
+public void invalidMethod(String... names, int age) {
+    // Not allowed!
+}
+🔹 Internally, it’s just an array:
+printNumbers(1, 2, 3); // Treated as: printNumbers(new int[]{1, 2, 3});
