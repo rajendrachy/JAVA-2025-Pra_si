@@ -1,0 +1,42 @@
+ Code Breakdown:
+class Geeks {
+
+    // Constructor
+    Geeks() {
+        super();  // <-- use of super
+        System.out.println("Constructor Called");
+    }
+
+    public static void main(String[] args) {
+        Geeks geek = new Geeks();
+    }
+}
+✅ What does super() do?
+The keyword super() calls the constructor of the parent (super) class.
+In this case, the Geeks class does not explicitly extend any class, so Java automatically assumes:
+
+
+
+class Geeks extends Object
+So, super(); is calling the constructor of the Object class, which is the default parent of every Java class.
+
+
+
+
+Why use super(); here?
+It's optional in this case — if you remove super();, Java still implicitly calls it.
+
+If your class extends another class, calling super(); can be used to:
+
+Call the parent class's constructor (especially if it has parameters).
+
+Initialize fields or logic in the parent class first.
+
+🔍 Behind the scenes:
+
+Geeks() {
+    super(); // calls Object class constructor
+    System.out.println("Constructor Called");
+}
+
+
