@@ -1,0 +1,10 @@
+ import java.io.*;
+This is an import statement in Java. It tells the compiler that your program will use classes from the **java.io** package.
+
+🔹 What is java.io?
+java.io is a built-in Java package that contains input and output (I/O) classes.
+
+These classes are used to read from and write to files, streams, the console, etc.
+
+🔹 What does * mean?
+The * means "import all classes" from the java.io package.
