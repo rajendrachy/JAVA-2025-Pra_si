@@ -1,0 +1,26 @@
+ Code:
+java
+Copy
+Edit
+class Car {
+    String model;
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car c = null;
+        System.out.println(c.model);
+    }
+}
+❓ What is the output?
+java
+Copy
+Edit
+Exception in thread "main" java.lang.NullPointerException
+❗ Why does this happen?
+You declared Car c = null;
+→ This means the reference c does not point to any Car object — it’s null.
+
+Then you tried to access c.model
+→ Java tries to access a field (model) of a null object, which leads to a NullPointerException.
+

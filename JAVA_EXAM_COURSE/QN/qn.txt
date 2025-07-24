@@ -1,0 +1,26 @@
+✅ Code:
+
+class Test {
+    int x;
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Test t = new Test();
+        System.out.println(t.x);
+    }
+}
+❓ Output: 0
+
+
+
+
+
+✅ Why is the output 0?
+Because in Java:
+When you create an object with new Test(), Java automatically initializes all instance variables to their default values.
+For primitive types like int, the default value is 0.
+
+
+
+
