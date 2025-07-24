@@ -1,13 +1,13 @@
 
-//--------------Doen Casting------------
-int a = (int) 10.0; // Downcasting from double to int
+//--------------Dawn Casting------------Narrowing (Downcasting)---------------------------------------
+int a = (int) 10.0; // DownFasting from double to int
 System.out.println(a); // Output: 10
 
 
 
 
-
-//----------------Up-Casting--------------------
+//----------------Up-Casting--------------------Upcasting is called implicit typecasting in Java.-----------------
+---------Up-castig is also called --------idening reference conversion-------------
 public class UpcastingExample {
     public static void main(String[] args) {
         int a = 10;
@@ -21,6 +21,11 @@ public class UpcastingExample {
 
 float b = 10; // upcasting
 System.out.println(b); // Output: 10.0
+
+
+
+
+
 
 
 
