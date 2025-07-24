@@ -1,0 +1,75 @@
+📘 Call by Value vs Call by Reference
+Feature	Call by Value	Call by Reference
+What is passed	A copy of the variable	A reference/address of the variable
+Changes affect original?	 No (original not changed)	Yes (original may change)
+Java behavior	 Java always uses call by value Java does not support call by reference directly
+
+
+
+
+
+
+🔍 How Java Works: Always Call by Value
+But wait! People get confused because Java behaves like call by reference for objects. Why? Because Java passes object references by value.
+
+
+
+ Example 1: Call by Value (primitive)
+public class Test {
+    public static void update(int x) {
+        x = x + 10;
+        System.out.println("Inside update: " + x); // 20
+    }
+
+    public static void main(String[] args) {
+        int a = 10;
+        update(a);
+        System.out.println("After update: " + a);  // 10
+    }
+}
+
+
+
+ Explanation:
+a is passed by value.
+Inside update(), a copy of a is modified.
+
+Original a remains unchanged.
+
+
+
+
+
+
+
+
+
+Example 2: Looks Like Call by Reference (object)
+class Person {
+    String name;
+}
+
+public class Test {
+    public static void update(Person p) {
+        p.name = "Alice";
+    }
+
+    public static void main(String[] args) {
+        Person p1 = new Person();
+        p1.name = "Bob";
+
+        update(p1);
+        System.out.println(p1.name); // Alice
+    }
+}
+
+
+
+-----Explanation:-----
+The reference (address) to p1 is passed by value.
+
+p and p1 both point to the same object.
+
+Modifying the object affects p1.
+
+
