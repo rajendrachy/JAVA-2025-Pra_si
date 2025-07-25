@@ -6,6 +6,7 @@ class Car {
     String model;
 }
 
+
 public class Main {
     public static void main(String[] args) {
         Car c = null;
@@ -23,4 +24,8 @@ You declared Car c = null;
 
 Then you tried to access c.model
 → Java tries to access a field (model) of a null object, which leads to a NullPointerException.
+
+
+
+
 

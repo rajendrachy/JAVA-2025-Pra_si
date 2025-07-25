@@ -2,7 +2,7 @@
 
 class Mobile {
     String brand; // this are instance variable 
-    static String name; // make this variable common to all the Object
+     String name; // make this variable common to all the Object
     static int price;
 
     //------- Variable creating inside a method are a local Variable----
@@ -16,6 +16,7 @@ class Mobile {
 }
 
 
+
 public class Demo {
     public static void main(String[] args) {
         Mobile m = new Mobile();   // Create object
@@ -23,13 +24,15 @@ public class Demo {
         m.name = "Galaxy S21";     // Set name
         m.price = 30000;           // Set price
 
+
+
         Mobile obj2 = new Mobile();
         obj2.brand = "Oppo";
         obj2.name = "Readmi12";
         obj2.price = 20000;
 
 
-        m.name = "Rajendra"; // change in both // the static variable should calleb by the class name Best practice
+        m.name = "Rajendra"; // change in both // the static variable should called by the class name Best practice
 
         Mobile.price = 5000000;
 
@@ -38,6 +41,9 @@ public class Demo {
                          
     }
 }
+
+
+
 
 
 

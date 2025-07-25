@@ -6,6 +6,11 @@ class Mobile {
     static String name; // make this variable common to all the Object
     static int price;
 
+
+
+
+
+
     //------- Variable creating inside a method are a local Variable----
 
    public  void show() { // it is instance method
@@ -14,6 +19,9 @@ class Mobile {
         System.out.println("Price: " + price);
     }
 
+
+
+    
 
     public static void show1() { // we should use static variable only under static method
 
@@ -30,6 +38,8 @@ public class StaticMethod {
             Mobile.show1();
     }
 }
+
+
 
 
 

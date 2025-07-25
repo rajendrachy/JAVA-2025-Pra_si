@@ -1,7 +1,10 @@
 Absolutely! In Java, the this() keyword is used for constructor chaining, which means one constructor can call another constructor in the same class.
 
-✅ Syntax Rule:
+
+----------Syntax Rule:---------
 this() must be the first statement in the constructor.
+
+
 
 ------Example: Using this() for Constructor Chaining------
 public class Student {
@@ -13,6 +16,7 @@ public class Student {
     this("Unknown", 18); // calls Constructor 2
     System.out.println("Default constructor called");
   }
+
 
   // Constructor 2 (parameterized)
   public Student(String name, int age) {
@@ -35,9 +39,12 @@ public class Student {
 }
 
 
+
 ---------Output:-------------
 Parameterized constructor called
 Default constructor called
 Parameterized constructor called
 Name: Unknown, Age: 18
 Name: Alice, Age: 21
+
+

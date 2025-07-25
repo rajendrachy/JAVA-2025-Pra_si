@@ -1,5 +1,5 @@
 --------------------- Identifiers in Java - Full Notes--------------------
-✅ 1. What is an Identifier?
+------ 1. What is an Identifier?-----------
 An identifier is the name used to identify:
 
 Classes
@@ -11,20 +11,40 @@ Packages, etc.
 
 
 
+
+
+
 -------------------Example:--------------------
 int age = 25;
 Here, age is the identifier.
 
 
+
+
+
+
+
 ----------------------- 2. Rules for Naming Identifiers-------------------------
 Java has strict rules for creating valid identifiers:
 
+
+
+
+
+
+
+
+
+
 -------------Rule	Description	Example---------------
 1	Can use letters (A–Z, a–z), digits (0–9), underscore _, and dollar sign $	myVar, num1, _data, $value
-2	Cannot start with a digit	❌ -> 1value (invalid)
-3	Cannot use Java keywords/reserved words	❌ class, int, if
+2	Cannot start with a digit	 -> 1value (invalid)
+3	Cannot use Java keywords/reserved words	 class, int, if
 4	Case-sensitive	MyVar ≠ myvar
 5	No special characters (@, #, !, etc.) allowed except _ and $	❌ value@
+
+
+
 
 
 
@@ -47,13 +67,17 @@ Package	lowercase	com.company.project
 
 ------------------ 4. Invalid Identifier Examples-------------------
 Here are examples that will cause compile-time errors:
-
 ------------Invalid Identifier	Reason------------
 int	           Reserved keyword
 2ndNumber	     Starts with a digit
 user-name	     Contains - (illegal character)
 @value	       Contains illegal character @
 null	        Reserved literal
+
+
+
+
+
 
 ------------------ 5. Examples---------------------
 class MyClass {
@@ -64,6 +88,9 @@ class MyClass {
         System.out.println(studentName);
     }
 }
+
+
+
 
 
 

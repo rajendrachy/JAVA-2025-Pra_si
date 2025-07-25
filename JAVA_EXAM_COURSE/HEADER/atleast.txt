@@ -1,4 +1,4 @@
-✅ 1. Meaning in English:
-Phrase	Meaning	Example
+----------- 1. Meaning in English:------------
 At least	Minimum – not less than	"You need at least 5 pens" → 5 or more pens
 At most	Maximum – not more than	"Take at most 3 pens" → 3 or fewer pens
+
