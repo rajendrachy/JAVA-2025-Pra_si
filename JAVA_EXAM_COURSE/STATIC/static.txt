@@ -1,0 +1,1 @@
+“Static” makes main a class method you can call without first creating an object. in main class 
