@@ -1,0 +1,16 @@
+In Java programming, "robust" refers to the language's ability to handle errors and unexpected situations gracefully without crashing. It's one of Java's key design principles.
+
+------------Key features that make Java robust:---------------
+a.Strong memory management
+Java has automatic garbage collection, which helps prevent memory leaks.
+
+b.Exception handling
+Java forces developers to handle errors using try, catch, and finally blocks, reducing the risk of unexpected crashes.
+
+c.Type checking
+Java is a statically typed language with strong type checking at compile time, which helps catch errors early.
+
+d.Lack of pointers
+Java does not allow direct access to memory using pointers, making the program more secure and less prone to errors.
+
+
