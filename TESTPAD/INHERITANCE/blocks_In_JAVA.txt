@@ -1,0 +1,135 @@
+------------Initializer blocks------------------
+Initializer block contains the code that is always executed whenever an instance is created. These blocks are executed before constructors. For example,
+
+
+
+class Main
+{
+  // Initialization Block
+  {
+    System.out.println("Code Quotient");
+  }
+
+  // Constructor of Main class
+  Main()
+  {
+    System.out.println("Constructor Called");
+  }
+
+  public static void main(String[] args)
+  {
+    Main ob1 = new Main();
+  }
+}
+
+
+----------Output-----------
+Code Quotient
+Constructor Called
+
+
+
+
+
+
+
+
+
+
+
+
+
+If compiler finds multiple initializer blocks, then they all are executed from top to bottom i.e. the initializer blocks which is written at top will be executed first. For example,
+
+class Main
+{
+  // Initialization Block  1
+  {
+    System.out.println("Code Quotient-1");
+  }
+
+  // Initialization Block  2
+  {
+    System.out.println("Code Quotient-2");
+  }
+ 
+  // Constructor of Main class
+  Main()
+  {
+    System.out.println("Constructor Called");
+  }
+
+  // Initialization Block  3
+  {
+    System.out.println("Code Quotient-3");
+  }
+
+  public static void main(String[] args)
+  {
+    Main ob1 = new Main();
+  }
+
+  // Initialization Block  4
+  {
+    System.out.println("Code Quotient-4");
+  }
+}
+
+
+-----Output-------
+Code Quotient-1
+Code Quotient-2
+Code Quotient-3
+Code Quotient-4
+Constructor Called
+
+
+
+
+
+
+
+
+-----------Initializer block with parent class----------
+In case of inheritance, these blocks are executed in same manner as other parts i.e. first preference will be given to parent class then derived class. For example,
+
+class BaseClass
+{
+    // Initialization Block
+    {
+        System.out.println("Code Quotient-Base");
+    }
+
+    // Constructor of BaseClass class
+    BaseClass ()
+    {
+        System.out.println("Constructor of BaseClass  Called");
+    }
+}
+
+class Main extends BaseClass
+{
+    // Initialization Block
+    {
+        System.out.println("Code Quotient-Derived");
+    }
+
+    // Constructor of Main class
+    Main()
+    {
+        System.out.println("Constructor Called-Main Class");
+    }
+
+    public static void main(String[] args)
+    {
+        Main ob1 = new Main();
+    }
+}
+
+
+----output-----
+Code Quotient-Base
+Constructor of BaseClass  Called
+Code Quotient-Derived
+Constructor Called-Main Class
+

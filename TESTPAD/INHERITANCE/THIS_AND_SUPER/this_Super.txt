@@ -1,0 +1,29 @@
+------------this() and super() in java-------------
+ans:- this() and super() both are special in terms of constructors. 
+
+=> this() is used to call another constructor of same class. 
+=> super() is used to call a constructor of super class.
+
+
+class AreaObject 
+{
+	double x, y, width, height;
+	public AreaObject(double x, double y, double width, double height) 
+	{
+	this.x = x;
+	this.y = y;
+	this.width = width;
+	this.height = height;
+	}
+	public AreaObject(double x, double y) 
+	{
+		this(x,y,10,10); // calls main constructor with default size
+	}
+	public AreaObject() 
+	{
+		this(1,1); // calls above constructor with default position
+	}
+}
+
+this() is used to call another constructor in the same class.
+This is called constructor chaining.

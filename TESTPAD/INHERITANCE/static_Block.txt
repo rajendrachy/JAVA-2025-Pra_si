@@ -1,0 +1,91 @@
+Java has a special block called a static block used for initializing static data.
+
+It runs only once, when:
+The class is first loaded
+Or a static member is accessed
+Runs before constructors and even if no object is created.
+
+
+
+
+class Main
+{
+  // Initialization Block
+  {
+    System.out.println("Code Quotient-Non-Static");
+  }
+
+  // Constructor of Main class
+  Main()
+  {
+    System.out.println("Constructor Called");
+  }
+
+  // static Initialization Block
+  static {
+    System.out.println("Code Quotient- Static");
+  }
+
+  public static void main(String[] args)
+  {
+    Main ob1 = new Main();
+    Main ob2 = new Main();
+    Main ob3 = new Main();
+  }
+}
+
+
+---------output--------
+Code Quotient- Static
+Code Quotient-Non-Static
+Constructor Called
+Code Quotient-Non-Static
+Constructor Called
+Code Quotient-Non-Static
+Constructor Called
+
+
+
+
+class Main
+{
+  static int i;
+
+  // Initialization Block
+  {
+    System.out.println("Code Quotient-Non-Static");
+  }
+
+  // Constructor of Main class
+  Main()
+  {
+    System.out.println("Constructor Called");
+  }
+
+  // static Initialization Block
+  static {
+    i=10;
+    System.out.println("Code Quotient- Static");
+  }
+
+  public static void main(String[] args)
+  {
+    Main ob1 = new Main();
+    Main ob2 = new Main();
+    Main ob3 = new Main();
+    System.out.println("i in main = " + Main.i);
+  }
+}
+
+
+
+
+-------------output----------
+Code Quotient- Static
+Code Quotient-Non-Static
+Constructor Called
+Code Quotient-Non-Static
+Constructor Called
+Code Quotient-Non-Static
+Constructor Called
+i in main = 10
