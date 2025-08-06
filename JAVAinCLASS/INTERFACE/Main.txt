@@ -1,0 +1,3 @@
+ Why would we make two interfaces with the same method?
+✅ Because the interfaces represent different roles or behaviors, even if the method name is the same.
+This allows you to keep your design modular and flexible, separating concerns based on what the class can do rather than how it does it.
