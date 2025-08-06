@@ -1,0 +1,12 @@
+If you write the following code in Java:
+
+java
+Copy
+Edit
+int a;
+System.out.println(a);
+❌ You will get a compile-time error.
+🔎 Why?
+In Java, local variables (like a in this case) must be initialized before use.
+
+Even though a is declared, it has no value assigned, and Java does not assign a default value to local variables.
