@@ -1,0 +1,57 @@
+------------In Java, variables declared inside an interface are by default:---------
+a.public – accessible from anywhere.
+b.static – belong to the interface itself, not to any instance.
+c.final – must be assigned a value at declaration and cannot be changed later.
+
+
+
+
+
+------------In Java, methods declared inside an interface (before Java 8) are by default:-----------
+a.public – accessible from anywhere.
+b.abstract – must be implemented by the class that implements the interface.
+
+
+
+
+//--------question------
+Java Coding Activity – Fuel Station Billing System
+Question Statement:
+You are required to design and implement a simple fuel station billing system using
+Java interfaces and classes.
+The objective is to demonstrate the use of interfaces, constants, and polymorphism
+in calculating fuel bills for different types of vehicles.
+What is Given to the You:
+You are provided with a FuelStation interface. This interface contains:
+1. Constants for fuel price per litre for different vehicle types:
+double PETROL_PRICE = 105.5;
+double DIESEL_PRICE = 92.3;
+double CNG_PRICE = 78.9;
+2. Abstract Methods:
+1. void fillFuel(String vehicleNumber, double litres);
+2. double calcBill(double litres);
+What to Implement:
+1. Create three classes — PetrolVehicle, DieselVehicle, and CNGVehicle — that
+implement the FuelStation interface.
+2. In each class:
+o Implement the fillFuel method to display a message confirming the fuel
+type and quantity filled for that vehicle.
+o Implement the calcBill method to calculate the total bill using the
+relevant fuel price constant from the interface.
+3. Create a BillingCounter class that contains a method generateBill.
+4. The generateBill method should accept:
+o A FuelStation object (any vehicle type)
+o The vehicle number
+o The litres of fuel filled
+5. Inside generateBill:
+o Call fillFuel to display the fuel filling message.
+o Call calcBill to display the calculated bill amount.
+Method Signature in BillingCounter Class:
+public void generateBill(FuelStation f, String vehicleNumber, double litres)
+Sample Output Example:
+Filling 20.0 litres of Petrol for vehicle HP12AB1234.
+Total Bill: ₹2110.0
+Filling 15.0 litres of Diesel for vehicle PB10CD5678.
+Total Bill: ₹1384.5
+Filling 10.0 litres of CNG for vehicle CH01EF4321.
+Total Bill: ₹789.0

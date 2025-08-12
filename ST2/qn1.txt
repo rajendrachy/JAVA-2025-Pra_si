@@ -1,0 +1,24 @@
+Java Interfaces – Vehicle Example
+Problem Statement:
+You are developing a simple vehicle management system. All types of vehicles should
+be able to start and stop their engines, but the way they do this may vary depending on
+the vehicle type.
+Your Task:
+1. Create an interface named Vehicle with the following methods:
+void startEngine();
+void stopEngine();
+2. Create two classes that implement this interface:
+• Car – represents a four-wheeler.
+• Motorcycle – represents a two-wheeler.
+3. In each class, override the startEngine() and stopEngine() methods to display
+messages specific to that vehicle type.
+Example: "Car engine started." or "Motorcycle engine stopped."
+4. In the main() method:
+1. Create objects of both Car and Motorcycle.
+2. Store each object in a Vehicle interface reference and call the methods.
+Expected Output Example:
+Car engine started.
+Car engine stopped.
+Motorcycle engine started.
+Motorcycle engine stopped.
+
