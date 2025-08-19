@@ -18,6 +18,8 @@ class Employee {
     }
 }
 
+
+
 class Manager extends Employee {
     String department;
 
@@ -36,6 +38,10 @@ class Manager extends Employee {
         System.out.println("Manager handles: " + department);
     }
 }
+
+
+
+
 
 class SeniorManager extends Manager {
     int teamSize;
@@ -57,7 +63,13 @@ class SeniorManager extends Manager {
     }
 }
 
+
+
+
+
+
 public class Main {
+
     public static void main(String[] args) {
         // Basic Employee
         Employee e = new Employee("Rajendra", 101);
@@ -77,3 +89,12 @@ public class Main {
         sm.displayDetails();
     }
 }
+
+
+
+
+
+
+
+
+
