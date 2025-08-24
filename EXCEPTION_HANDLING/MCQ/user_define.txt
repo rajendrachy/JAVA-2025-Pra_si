@@ -1,0 +1,250 @@
+Java Exception Handling & Assertions MCQs
+
+1. Which of the following is true about unchecked exceptions?
+A) Must be declared in the method’s throws clause
+B) Checked by the compiler at compile-time
+C) Automatically available without throws declaration
+D) Cannot be caught by a catch block
+
+Answer: C) Automatically available without throws declaration
+
+
+
+
+
+
+
+2. Which of the following is a checked exception?
+A) ArithmeticException
+B) ClassNotFoundException
+C) NullPointerException
+D) ArrayIndexOutOfBoundsException
+
+Answer: B) ClassNotFoundException
+
+
+
+
+
+
+
+3. How do you define a custom exception in Java?
+A) Extend RuntimeException only
+B) Extend Exception or any subclass of Throwable
+C) Implement Throwable interface
+D) Create a class without extending any class
+
+Answer: B) Extend Exception or any subclass of Throwable
+
+
+
+
+
+
+
+
+4. In the example class MyException extends Exception, what does toString() override?
+A) Object class method
+B) Throwable class method
+C) Exception class method
+D) RuntimeException class method
+
+Answer: B) Throwable class method
+
+
+
+
+
+
+
+5. In the compute(int a) throws MyException example, when is MyException thrown?
+A) When a < 0
+B) When a > 10
+C) When a == 0
+D) Always
+
+Answer: A) When a < 10
+
+
+
+
+
+
+
+
+
+6. Which keyword is used to explicitly throw an exception?
+A) throws
+B) throw
+C) catch
+D) finally
+
+Answer: B) throw
+
+
+
+
+
+
+
+
+7. Which keyword lists the exceptions a method may throw?
+A) throw
+B) throws
+C) catch
+D) final
+
+Answer: B) throws
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8. What happens if an exception is not caught in a method?
+A) Compiler ignores it
+B) JVM terminates the thread and propagates the exception
+C) Exception is silently discarded
+D) Program continues normally
+
+Answer: B) JVM terminates the thread and propagates the exception
+
+
+
+
+
+
+
+
+
+
+
+9. Which of the following statements about assertions is true?
+A) Enabled by default in production
+B) Used to verify internal assumptions in code
+C) Can replace all argument validation in public methods
+D) Cannot throw AssertionError
+
+Answer: B) Used to verify internal assumptions in code
+
+
+
+
+
+
+
+
+
+
+
+
+10. How do you enable assertions at runtime?
+A) java Main.java
+B) javac -ea Main.java
+C) java -ea Main
+D) java -enable Main
+
+Answer: C) java -ea Main
+
+
+
+
+
+
+
+11. What is the effect of assert booleanExpr; if booleanExpr is false?
+A) Nothing happens
+B) Program terminates normally
+C) Throws an AssertionError
+D) Compiler error
+
+Answer: C) Throws an AssertionError
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12. Which of the following is a recommended use of assertions?
+A) Validate public method arguments
+B) Check internal invariants in private methods
+C) Replace try-catch blocks
+D) Handle user input errors
+
+Answer: B) Check internal invariants in private methods
+
+
+
+
+
+
+
+
+
+13. What does the statement assert booleanExpr : errorMessageExpr; do?
+A) Ignores errorMessageExpr
+B) Throws an AssertionError with errorMessageExpr if booleanExpr is false
+C) Converts errorMessageExpr to boolean
+D) Prints errorMessageExpr without stopping execution
+
+Answer: B) Throws an AssertionError with errorMessageExpr if booleanExpr is false
+
+
+
+
+
+
+
+
+
+
+
+
+14. Why should assertions not be used to validate arguments of public methods?
+A) They are always ignored
+B) They are disabled by default in production and cannot enforce validation
+C) They throw checked exceptions
+D) They slow down the program significantly
+
+Answer: B) They are disabled by default in production and cannot enforce validation
+
+
+
+
+
+
+
+
+
+
+
+15. Which exception is thrown for an invalid switch-case default in assertion example?
+A) RuntimeException
+B) Exception
+C) AssertionError
+D) IllegalArgumentException
+
+Answer: C) AssertionError
+
+
+
+
+
+
+

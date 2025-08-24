@@ -1,0 +1,264 @@
+Java Exception Handling MCQs (Try-Catch-Finally)
+
+1. Which of the following is true about a try block in Java?
+A) A try block can exist without catch or finally
+B) A try block must have at least one catch or finally
+C) A try block must have both catch and finally
+D) A try block cannot contain nested try blocks
+
+Answer: B) A try block must have at least one catch or finally
+
+
+
+
+
+
+2. How many finally blocks can a try statement have?
+A) 0
+B) 1
+C) Multiple
+D) Unlimited
+
+Answer: B) 1
+
+
+
+
+
+3. What is the role of the finally block?
+A) To catch exceptions
+B) To guarantee execution of code regardless of exceptions
+C) To throw exceptions
+D) To terminate the program
+
+Answer: B) To guarantee execution of code regardless of exceptions
+
+
+
+
+
+
+
+
+
+4. What is the correct syntax for a catch block?
+A) catch(Exception e) { ... }
+B) catch { Exception e ... }
+C) catch e(Exception) { ... }
+D) catch(Exception) ...
+
+Answer: A) catch(Exception e) { ... }
+
+
+
+
+
+
+
+
+
+
+
+5. Which of the following statements about catch block order is correct?
+A) Superclass exceptions must be caught before subclass exceptions
+B) Subclass exceptions must be caught before superclass exceptions
+C) Order of catch blocks does not matter
+D) Only one catch block is allowed
+
+Answer: B) Subclass exceptions must be caught before superclass exceptions
+
+
+
+
+
+
+
+
+
+
+
+
+6. If an exception occurs inside a try block and is not caught, what happens?
+A) Finally block executes and program terminates
+B) Program ignores the exception
+C) Catch block executes even if it does not match
+D) Exception is silently discarded
+
+Answer: A) Finally block executes and program terminates
+
+
+
+
+
+
+
+
+
+
+
+7. Which of the following is true for re-throwing an exception?
+A) The exception cannot be caught again
+B) It can be caught by a higher-level try block
+C) It can only be caught in the same catch block
+D) Re-throwing is not allowed in Java
+
+Answer: B) It can be caught by a higher-level try block
+
+
+
+
+
+
+
+
+
+8. What will happen if a try block contains multiple statements and an exception occurs in the middle?
+A) Execution continues from the next statement in try
+B) Remaining statements in try are skipped, and catch is executed
+C) Finally block is skipped
+D) Program terminates immediately without catch
+
+Answer: B) Remaining statements in try are skipped, and catch is executed
+
+
+
+
+
+
+
+
+
+9. Which method can be used to print the complete call stack of an exception?
+A) getMessage()
+B) printStackTrace()
+C) toString()
+D) catchTrace()
+
+Answer: B) printStackTrace()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10. What does getMessage() method of Throwable return?
+A) Name of the exception class
+B) Stack trace of the exception
+C) Message passed while constructing the exception
+D) Program state
+
+Answer: C) Message passed while constructing the exception
+
+
+//---------------example--------------
+public class Main {
+    public static void main(String[] args) {
+        try {
+            throw new ArithmeticException("Cannot divide by zero");
+        } catch (ArithmeticException e) {
+            System.out.println("Exception message: " + e.getMessage());
+        }
+    }
+}
+
+
+
+
+
+
+
+
+11. What is the output of the following snippet?
+
+try {
+   int a = 5 / 0;
+} catch(ArithmeticException e) {
+   System.out.println("Caught");
+} finally {
+   System.out.println("Finally");
+}
+
+
+A) Caught
+B) Finally
+C) Caught Finally
+D) Runtime error
+
+Answer: C) Caught Finally
+
+
+
+
+
+
+
+
+
+12. Can a catch block catch exceptions of its subclass type?
+A) Yes
+B) No
+C) Only if subclass is declared explicitly
+D) Only if superclass is declared first
+
+Answer: A) Yes
+
+
+
+
+
+
+
+
+13. Which of the following is true about method overriding and exceptions?
+A) Overriding method can throw new unchecked exceptions
+B) Overriding method can throw new checked exceptions not in original
+C) Overriding method cannot throw any exception
+D) Overriding method can throw fewer or same exceptions as original
+
+Answer: D) Overriding method can throw fewer or same exceptions as original
+
+
+
+
+
+
+
+
+14. Which statement about finally block termination is correct?
+A) Finally is always executed, unless System.exit() is called
+B) Finally is skipped if no exception occurs
+C) Finally executes only for checked exceptions
+D) Finally executes only for runtime exceptions
+
+Answer: A) Finally is always executed, unless System.exit() is called
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+15. Which of the following is not advisable in exception handling?
+A) Catching specific exceptions
+B) Catching a superclass exception like Exception unnecessarily
+C) Using finally for resource cleanup
+D) Declaring throws in main() for checked exceptions
+
+Answer: B) Catching a superclass exception like Exception unnecessarily
