@@ -16,7 +16,7 @@
 
 
 //-----------------concat()--------------
-package LAC1_College_wallah.CODE;
+//package LAC1_College_wallah.CODE;
 
 public class toLowerCase {
   public static void main(String[] args) {

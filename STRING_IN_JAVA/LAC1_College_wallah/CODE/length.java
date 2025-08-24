@@ -1,4 +1,4 @@
-package LAC1_College_wallah.CODE;
+//package LAC1_College_wallah.CODE;
 //-------------CharAt() and length()-----------
 public class length {
   public static void main(String[] args) {
@@ -12,9 +12,14 @@ public class length {
 
 
         char ch = name.charAt(3); // index start from 0(Zero) 
-        System.out.println(ch);
+        System.out.println(ch); // e from Rajendra Chaudhary
+        
         
   }
 }
+
+
+
+
 
 

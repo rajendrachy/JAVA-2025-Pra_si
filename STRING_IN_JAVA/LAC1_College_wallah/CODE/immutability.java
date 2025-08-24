@@ -6,7 +6,7 @@
 //     String s = "Hello";
 //     String x = "Hello";
 
-//     //s.charSt(0) = 'q'; // This line will cause a compile-time error because strings are immutable
+//     //s.charAt(0) = 'q'; // This line will cause a compile-time error because strings are immutable
 //      s = "Dello"; // This creates a new string object and assigns it to s
 //     System.out.println(s); // Output: Dello
 //   }
@@ -32,7 +32,8 @@
 
 
 
-package LAC1_College_wallah.CODE;
+
+//package LAC1_College_wallah.CODE;
 
 public class immutability {
   public static void main(String[] args) {
@@ -51,6 +52,14 @@ public class immutability {
 
 
 
-// why is string immutable?
+
+// Why is string immutable?
 // 1. Security: Immutable strings are safer to use in multi-threaded environments
 //2. Interning exists to save memory and improve performance
+
+
+
+
+
+
+

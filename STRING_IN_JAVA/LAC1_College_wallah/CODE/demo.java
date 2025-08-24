@@ -1,5 +1,5 @@
-// package LAC1.CODE;
-//  import java.util.*; // all package import
+// package LAC1_College_wallah.CODE;
+// import java.util.*; // all package import
 
 // public class demo {
 //     public static void main(String[] args) {
@@ -9,6 +9,7 @@
 
 //     }
 // }
+
 
 
 

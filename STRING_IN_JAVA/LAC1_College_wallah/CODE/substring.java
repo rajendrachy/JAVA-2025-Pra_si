@@ -1,4 +1,4 @@
-package LAC1_College_wallah.CODE;
+//package LAC1_College_wallah.CODE;
 //------------substring(i, j) and substring(i)----------------- 
 // Substring is a continuous part of the string
 public class substring {

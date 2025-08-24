@@ -1,4 +1,4 @@
-package LAC1_College_wallah.CODE;
+//package LAC1_College_wallah.CODE;
 //----------Performance of String-----------------
 //poor performance of String in Java due to immutability
 import java.util.*;
@@ -14,3 +14,6 @@ public class performance {
     System.out.println(str); // 12345678910
   }
 }
+
+
+

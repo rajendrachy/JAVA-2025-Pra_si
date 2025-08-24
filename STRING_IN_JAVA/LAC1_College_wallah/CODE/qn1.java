@@ -1,4 +1,4 @@
-package LAC1_College_wallah.CODE;
+//package LAC1_College_wallah.CODE;
 import java.util.*;
 
 public class qn1 {
