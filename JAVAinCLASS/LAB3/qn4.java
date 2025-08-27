@@ -4,15 +4,22 @@ package LAB3;
 import java.util.Scanner;
 
 public class qn4 {
-   public static void main(String[] args) {
-   Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-   System.out.println("Enter a numer: ");
-   int num = sc.nextInt();
+        System.out.print("Enter a four-digit number: ");
+        String num = sc.next();  // Read as string to preserve digits and leading zeros
 
-   
-   
-   System.out.println("The result is : ");
+        String result = "";
 
-   }
+        for (int i = 0; i < num.length(); i++) {
+            int digit = num.charAt(i) - '0'; // convert char to int
+            digit = (digit + 1) % 10;        // add 1 and wrap around
+            result += digit;                 // add to result string
+        }
+
+        System.out.println("The result is: " + result);
+    }
 }
+
+
