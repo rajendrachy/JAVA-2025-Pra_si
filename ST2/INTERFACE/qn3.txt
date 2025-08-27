@@ -1,0 +1,41 @@
+Build Your Own Payment System
+This activity helps students understand:
+● Interfaces
+● Polymorphism
+● Dynamic Method Dispatch
+● Loose Coupling
+
+
+📝 Activity Plan
+Title: Build Your Own Payment System
+Objective:
+Students will create different types of payment processors using classes and
+explore how polymorphism allows flexibility and modular design.
+Step-by-Step Tasks:
+
+
+1. Starter Code:
+○ Provide students the basic Payments class necessarily having a
+processPayments method that accepts a double amount.
+○ Ask them to implement 2-3 different payment methods (via classes that
+extend Payments Class) and overrides the processPayment Method:
+■ UPIPayments
+■ CreditCardPayments
+■ PayPalPayments
+2. Portal Design:
+○ Implement PaymentPortal class
+In this class make a method OpenPortal which takes a Payments object
+and a double amount as parameters and processes payments.
+3. Test Class:
+○ Write a main method to:
+■ Instantiate different payment types.
+■ Pass them to the portal.
+■ Observe runtime polymorphism in action.
+
+
+
+
+
+
+
+

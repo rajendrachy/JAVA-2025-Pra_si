@@ -1,4 +1,3 @@
-package ST2;
 
 
 interface FuelStation {
@@ -61,6 +60,7 @@ class BillingCounter {
 
 
 
+
 public class qn2 {
      public static void main(String[] args) {
       BillingCounter cnt = new BillingCounter();
@@ -74,6 +74,10 @@ System.out.println();
         
      }
 }
+
+
+
+
 
 
 

@@ -1,0 +1,10 @@
+1. Make a new string using 2 given strings 
+2. Make a new string using 2 given strings taking alternative words 
+E.g -> str 1 = java programming language 
+str 2= coding with CodeQuotient 
+New string= java coding programming with language CodeQuotient 
+3. Make a new string by taking just next character e.g. str1 = java
+   New string= kbwb ( next character of 'j' is 'k')
+4. Make a new string by swaping characters of each word of string  -> from testpad string
+
+
