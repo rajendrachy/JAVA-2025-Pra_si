@@ -1,0 +1,1065 @@
+---------------Java MCQ Question Bank (60 Questions)---------------
+Inheritance-II (Q1 – Q15)
+
+Q1. Java does not support multiple inheritance with classes mainly to avoid:
+Method overloading
+Diamond problem
+Constructor chaining
+Ambiguity in variables
+-------Answer: Diamond problem
+-----------
+
+Note: Diamond problem arrise in the Multiple inheritance
+👉 Java does not support multiple inheritance with classes mainly to avoid the Diamond Problem.
+
+The Diamond Problem happens when a class inherits from two classes that have a common parent, leading to ambiguity about which method or variable to use.
+
+
+
+---------------Example of the Diamond Problem (if Java allowed multiple inheritance with classes)-------------------
+class A {
+    void display() {
+        System.out.println("Hello from A");
+    }
+}
+
+class B extends A {
+    void display() {
+        System.out.println("Hello from B");
+    }
+}
+
+class C extends A {
+    void display() {
+        System.out.println("Hello from C");
+    }
+}
+
+// ❌ Java does not allow this kind of multiple inheritance
+class D extends B, C {
+    // Which display() should D inherit? From B or from C?
+}
+
+
+
+
+-----------Example with interfaces:------------
+interface A {
+    void display();
+}
+
+interface B {
+    void display();
+}
+
+class C implements A, B {
+    // Must override display() → no ambiguity
+    public void display() {
+        System.out.println("Hello from C");
+    }
+}
+
+
+👉 So, Java avoids multiple inheritance with classes to prevent the diamond problem, but allows it with interfaces (since the implementing class resolves the ambiguity).
+
+
+
+
+
+
+
+
+
+Q2. Interfaces in Java allow:
+Multiple inheritance
+Single inheritance only
+No inheritance
+Inheritance only from abstract classes
+Answer: Multiple inheritance
+
+
+
+
+
+
+
+
+
+Q3. Which keyword is used to call a parent class constructor?
+this()
+super()
+parent()
+base()
+Answer: super()
+
+
+
+
+
+
+
+
+
+
+Q4. Method overriding is possible only when:
+Methods have the same name but different return types
+Methods have the same signature in parent and child
+Methods are private
+Methods are final
+Answer: Methods have the same signature in parent and child
+
+
+
+
+
+
+
+
+Q5. Which of the following supports dynamic method dispatch?
+Method overloading
+Static methods
+Method overriding
+Final methods
+Answer: Method overriding
+
+
+
+
+
+
+
+Q6. What does the final keyword prevent in Java?
+Inheritance of a class
+Overriding of a method
+Re-assignment of a variable
+All of the above
+Answer: All of the above
+
+
+
+
+
+
+
+Q7. If a method is declared final, it:
+Can be overridden
+Cannot be overridden
+Can be overloaded
+Is abstract
+Answer: Cannot be overridden
+
+
+
+
+
+
+
+
+
+
+
+
+Q8. Which of the following cannot be inherited?
+Static methods
+Constructors
+Final methods
+Public methods
+Answer: Constructors
+
+
+
+-------------Why constructors cannot be inherited?--------------------
+A constructor is not a member function of a class.
+It is special: used only for object creation and initialization.
+Every class in Java defines its own constructors, and they are not passed down to child classes.
+👉----------------- Example:---------------
+class Parent {
+    Parent() {
+        System.out.println("Parent constructor");
+    }
+}
+
+class Child extends Parent {
+    // No constructor defined
+    // Compiler creates a default Child() constructor automatically
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Child c = new Child();
+    }
+}
+
+-----------Output:------------
+Parent constructor
+
+
+
+
+
+
+
+
+
+
+
+Q9. What happens if both parent and child have the same variable name?
+Parent variable hides child variable
+Child variable hides parent variable
+Both conflict and cause error
+JVM decides dynamically
+Answer: Child variable hides parent variable
+
+-----------------Why?----------------------
+In Java inheritance:
+If parent and child classes have variables with the same name, the child variable hides (shadows) the parent variable.
+This is called variable shadowing.
+Unlike methods (which use dynamic method dispatch at runtime), variables are resolved at compile-time based on the reference type, not the actual object.
+
+-------------Example---------------
+class Parent {
+    int x = 10;
+}
+
+class Child extends Parent {
+    int x = 20; // child variable shadows parent's variable
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Parent p = new Child(); 
+        Child c = new Child();
+
+        System.out.println("p.x = " + p.x); // Parent reference → 10
+        System.out.println("c.x = " + c.x); // Child reference → 20
+    }
+}
+
+----------Output:----------
+p.x = 10
+c.x = 20
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q10. Dynamic method dispatch is resolved at:
+Compile-time
+Run-time
+JVM startup
+Class loading
+Answer: Run-time
+
+
+
+
+
+
+
+
+
+
+Q11. Interfaces can contain:
+Abstract methods only (before Java 8)
+Default & static methods (Java 8 onwards)
+Private methods (Java 9 onwards)
+All of the above
+Answer: All of the above
+
+
+
+
+
+
+
+
+
+
+Q12. The super keyword can be used to:
+Call parent class methods
+Call parent class constructor
+Access parent class variables
+All of the above
+Answer: All of the above
+
+
+
+
+
+
+
+
+
+
+
+
+Q13. A class declared as final:
+Cannot be extended
+Can be extended
+Cannot contain constructors
+Must be abstract
+Answer: Cannot be extended
+
+
+
+
+
+
+
+
+Q14. Which of these is true about method overriding?
+Static methods can be overridden
+Private methods can be overridden
+Final methods can be overridden
+None of the above
+Answer: None of the above
+
+
+
+
+
+
+
+
+
+
+
+Q15. Diamond problem is solved in Java by using:
+Abstract classes
+Interfaces
+Method overloading
+final keyword
+Answer: Interfaces
+
+
+
+
+
+
+
+
+---------------Modern Java Features (Q16 – Q20)------------------------
+
+Q16. A lambda expression is related to:
+Abstract classes
+Functional interfaces
+Static methods
+final classes
+Answer:Functional interfaces
+
+
+
+
+
+
+
+
+
+
+
+Q17. Functional interface contains:
+Exactly one abstract method
+Two abstract methods
+Any number of abstract methods
+Only default methods
+Answer: Exactly one abstract method
+
+
+
+
+
+
+
+
+
+
+
+
+Q18. Which annotation is used to override a method?
+@FunctionalInterface
+@Override
+@Inherited
+@Deprecated
+Answer: @Override
+
+
+
+
+
+
+
+
+
+
+Q19. @Deprecated annotation indicates:
+Method cannot be used
+Method is outdated
+Method will run slowly
+Method is private
+Answer: Method is outdated
+
+
+
+
+
+
+
+
+
+
+Q20. Lambda expressions were introduced in Java:
+5
+6
+7
+8
+Answer: 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------Abstract Classes & Interfaces (Q21 – Q35)------------------------------------
+
+Q21. An abstract class can have:
+Only abstract methods
+Abstract and concrete methods
+Only constructors
+Only static methods
+Answer: 2
+
+
+
+
+
+
+
+
+
+Q22. A class that implements an interface must:
+Implement all abstract methods
+Implement only static methods
+Be declared abstract always
+None of the above
+Answer: 1
+
+
+
+
+
+
+
+
+
+Q23. Can an interface extend another interface?
+Yes
+No
+Only one
+Only multiple
+Answer: 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q24. A package in Java is used for:
+Grouping classes
+Providing access modifiers
+Overloading methods
+Improving JVM speed
+Answer: 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q25. Which package is imported by default?
+java.util
+java.lang
+java.io
+java.sql
+Answer:java.lang
+
+
+
+
+
+
+
+Q26. The keyword used to define a package is:
+import
+package
+namespace
+include
+Answer: package
+
+
+
+
+
+
+
+
+Q27. Interfaces can contain:
+Constructors
+Constants
+Protected variables
+Private constructors
+Answer: Constants
+
+-----------Constants ✅------------
+Variables declared in an interface are implicitly public, static, and final, i.e., they are constants.
+Example:
+interface MyInterface {
+    int VALUE = 10;  // public static final automatically
+}
+
+
+
+
+
+
+
+Q28. Abstract methods must be declared:
+With body
+Without body
+As final
+As static
+Answer: Without body
+
+
+
+
+
+
+
+
+Q29. User-defined packages are created using:
+namespace
+package
+module
+include
+Answer: package
+
+
+
+
+
+
+
+
+
+Q30. Can abstract classes have constructors?
+Yes
+No
+Only if final
+Only if private
+Answer: Yes
+-------------Explanation------------
+In Java, an abstract class can have constructors.
+Even though you cannot create objects of an abstract class directly,
+
+
+
+
+
+
+
+
+Q31. Can we create object of an abstract class?
+Yes
+No
+Only in main()
+Depends on JVM
+Answer:No
+
+
+
+
+
+
+
+
+
+
+Q32. Which is correct for interfaces?
+Implements keyword is used
+Extends keyword is used
+Super keyword is used
+import keyword is used
+Answer: Implements keyword is used
+
+
+
+
+
+
+
+
+Q33. Multiple interfaces can be implemented by:
+One class
+Abstract class only
+Final class only
+None
+Answer:One class
+
+
+
+
+
+
+
+
+
+Q34. The keyword used to access a class from another package:
+include
+import
+require
+extend
+Answer: import
+
+
+
+
+
+
+
+
+
+Q35. Built-in packages in Java include:
+java.util
+java.io
+java.sql
+All of the above
+Answer: All of the above
+
+
+
+
+
+
+
+
+
+-------------------------Strings (Q36 – Q45)------------------------------
+Q36. Strings in Java are:
+Mutable
+Immutable
+Static
+Dynamic
+Answer: Immutable
+
+
+
+
+
+
+
+
+
+Q37. Which class provides mutable strings?
+String
+StringBuilder
+StringTokenizer
+StringUtils
+Answer: StringBuilder
+
+
+
+
+
+
+
+
+
+
+Q38. Which method compares two strings?
+equals()
+compareTo()
+==
+All of the above
+Answer:All of the above
+
+
+
+
+
+
+
+
+Q39. Which of these is thread-safe?
+StringBuffer
+StringBuilder
+Both
+None
+Answer: StringBuffer
+
+
+
+
+
+
+
+
+
+
+Q40. Which class is faster for single-thread operations?
+StringBuffer
+StringBuilder
+String
+StringTokenizer
+Answer:StringBuilder
+
+
+
+
+
+
+
+
+
+
+Q41. Which method converts objects to String?
+valueOf()
+parse()
+toString()
+format()
+Answer: toString()
+
+
+
+
+
+
+
+
+
+
+Q42. StringTokenizer is used for:
+String concatenation
+String splitting
+String comparison
+String immutability
+Answer: String splitting
+
+
+
+
+
+
+
+
+
+
+Q43. Which of these is immutable?
+StringBuffer
+StringBuilder
+String
+None
+Answer: String
+
+
+
+
+
+
+
+
+
+
+Q44. Which method returns string length?
+size()
+length()
+getSize()
+len()
+Answer: length()
+
+
+
+
+
+
+
+
+
+Q45. Which package has StringTokenizer class?
+java.util
+java.lang
+java.io
+java.sql
+Answer: java.util
+
+
+
+
+
+
+
+
+
+
+-------------------Exception Handling (Q46 – Q60)-------------------------
+
+Q46. Which keyword is used to handle exceptions?
+throw
+try
+catch
+finally
+Answer: try
+
+
+
+
+
+
+
+
+
+
+Q47. Which block must always execute?
+try
+catch
+finally
+throw
+Answer: finally
+
+
+
+
+
+
+
+
+
+Q48. Which of the following is a checked exception?
+IOException
+ArithmeticException
+NullPointerException
+ArrayIndexOutOfBoundsException
+Answer: IOException
+
+
+
+
+
+
+
+
+Q49. Which keyword is used to declare an exception?
+throws
+throw
+catch
+finally
+Answer:throws
+
+
+
+
+
+
+
+
+
+
+Q50. Which keyword is used to generate an exception explicitly?
+throws
+throw
+catch
+try
+Answer: throw
+
+
+
+
+
+
+
+
+
+
+
+Q51. Which of these is an unchecked exception?
+NullPointerException
+IOException
+SQLException
+ClassNotFoundException
+Answer: NullPointerException
+
+
+
+
+
+
+
+
+
+Q52. Multiple catch blocks are executed:
+All sequentially
+Only one (the first matching one)
+None if exception not thrown
+Both 2 & 3
+Answer:Both 2 & 3
+
+
+
+
+
+
+
+Q53. Which exception is thrown when dividing by zero?
+IOException
+ArithmeticException
+NullPointerException
+NumberFormatException
+Answer: ArithmeticException
+
+
+
+
+
+
+
+
+Q54. User-defined exceptions must extend:
+Throwable
+Exception
+RuntimeException
+Any of the above
+Answer: Any of the above
+
+
+
+
+
+
+
+
+
+Q55. Which clause is optional in exception handling?
+try
+catch
+finally
+throws
+Answer: finally
+
+
+
+
+
+
+
+
+
+Q56. Can we nest try blocks?
+Yes
+No
+Only once
+Only if checked exception
+Answer: Yes
+
+
+
+
+
+
+
+Q57. Which keyword is used in method declaration to indicate exception possibility?
+throw
+throws
+try
+catch
+Answer: throws
+
+
+
+
+
+
+
+
+
+
+
+Q58. Finally block executes even if:
+Exception occurs
+Exception handled
+return statement used
+All of the above
+Answer: All of the above
+
+
+
+
+
+
+
+
+Q59. If exception is not caught, it is handled by:
+User
+Compiler
+JVM
+None
+Answer:JVM
+
+
+
+
+
+
+
+
+Q60. What will happen if System.exit(0) is used inside try block?
+finally will still execute
+finally won’t execute
+Program will pause
+None
+Answer: finally won’t execute
+
+
+
+
+
+
+
