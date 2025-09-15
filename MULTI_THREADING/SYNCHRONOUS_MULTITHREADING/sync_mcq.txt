@@ -1,0 +1,251 @@
+📘 20 MCQs: Java Synchronization, Locks & Wait/Notify
+1.Which keyword in Java is used to make a method thread-safe by acquiring a lock before execution?
+a) static
+b) synchronized
+c) volatile
+d) transient
+Answer: b) synchronized
+
+
+
+
+
+
+2.In Java, when a synchronized method is declared:
+a) Multiple threads can execute it simultaneously
+b) Only one thread per object can execute it at a time
+c) Threads must always call wait() before using it
+d) It executes faster than normal methods
+Answer: b) Only one thread per object can execute it at a time
+
+
+
+
+
+
+
+
+3.Every class and object in Java is associated with:
+a) A thread pool
+b) A lock (monitor)
+c) A queue
+d) A semaphore
+Answer: b) A lock (monitor)
+
+
+
+
+
+
+
+4.When a thread is waiting to acquire an object lock, it moves from:
+a) Running → Dead
+b) Running → Waiting
+c) Ready → Dead
+d) Waiting → Running
+Answer: b) Running → Waiting
+
+
+
+
+
+
+
+5.Which of the following releases the lock of an object immediately when called?
+a) sleep()
+b) yield()
+c) wait()
+d) join()
+Answer: c) wait()
+
+
+
+
+
+
+6.What happens if two threads invoke a non-synchronized method that writes to the console?
+a) Output will always be in correct order
+b) Threads will wait for each other automatically
+c) Mixed/garbled output may occur
+d) JVM prevents both from running
+Answer: c) Mixed/garbled output may occur
+
+
+
+
+
+
+
+
+7.In the example, why does displayList() being synchronized prevent mixed output?
+a) It forces threads to sleep
+b) It allows only one thread to acquire the class lock at a time
+c) It runs faster than normal
+d) It prevents context switching
+Answer: b) It allows only one thread to acquire the class lock at a time
+
+
+
+
+
+
+8.If displayList() is declared as static synchronized, the lock is acquired on:
+a) Each object of the class
+b) The class’s Class object
+c) The current thread
+d) The JVM
+
+Answer: b) The class’s Class object
+
+
+
+
+
+
+9.Which of these is the correct syntax for a synchronized statement?
+a) synchronized method() { }
+b) synchronized(object) { statements }
+c) synchronized.class { }
+d) lock(object) { statements }
+Answer: b) synchronized(object) { statements }
+
+
+
+
+
+
+10.A synchronized statement block differs from a synchronized method because:
+a) It can acquire a lock on any object
+b) It only works inside constructors
+c) It is faster
+d) It doesn’t need a lock
+Answer: a) It can acquire a lock on any object
+
+
+
+
+
+11.Which of the following methods belongs to Object class and is used in thread communication?
+a) wait(), notify(), notifyAll()
+b) start(), run(), sleep()
+c) join(), yield(), interrupt()
+d) lock(), unlock(), tryLock()
+Answer: a) wait(), notify(), notifyAll()
+
+
+
+
+
+
+
+12.When a thread calls wait() on an object:
+a) It releases the lock and enters waiting pool
+b) It keeps the lock until another thread finishes
+c) It permanently dies
+d) It is forced into the dead state
+Answer: a) It releases the lock and enters waiting pool
+
+
+
+
+
+
+13.When notify() is called on an object:
+a) All waiting threads are woken up
+b) One waiting thread is woken up
+c) The current thread is stopped
+d) All threads are killed
+Answer: b) One waiting thread is woken up
+
+
+
+
+
+
+
+14.Which method should be used to wake up all waiting threads?
+a) wakeAll()
+b) notifyAll()
+c) resume()
+d) interrupt()
+Answer: b) notifyAll()
+
+
+
+
+
+
+
+15.Where must wait() and notify() methods be called?
+a) Inside any method
+b) Only inside synchronized blocks/methods
+c) Only in static methods
+d) From main() method
+Answer: b) Only inside synchronized blocks/methods
+
+
+
+
+
+
+
+16.In the given Resource example, if okToSend is false and a user thread calls displayOutput():
+a) It throws an exception
+b) It enters the waiting pool
+c) It terminates immediately
+d) It ignores the condition and executes
+Answer: b) It enters the waiting pool
+
+
+
+
+
+
+17.What is the purpose of the Controller thread in the example?
+a) To terminate user threads
+b) To periodically allow output by calling notify()
+c) To monitor JVM state
+d) To execute user threads’ code
+Answer: b) To periodically allow output by calling notify()
+
+
+
+
+
+
+
+18.If multiple threads are waiting on an object and notify() is called:
+a) All threads resume simultaneously
+b) One thread resumes, others keep waiting
+c) No thread resumes until notifyAll()
+d) JVM decides randomly if any thread resumes
+Answer: b) One thread resumes, others keep waiting
+
+
+
+
+
+
+
+19.Which exception is thrown when a thread is interrupted while waiting?
+a) IllegalMonitorStateException
+b) ThreadDeathException
+c) InterruptedException
+d) IllegalStateException
+Answer: c) InterruptedException
+
+
+
+
+
+
+
+20.Why is wait() considered more efficient than continuously polling a resource?
+a) It consumes less CPU since the thread is paused
+b) It avoids using synchronized blocks
+c) It terminates threads permanently
+d) It runs faster than polling loops
+Answer: a) It consumes less CPU since the thread is paused
+
+
+

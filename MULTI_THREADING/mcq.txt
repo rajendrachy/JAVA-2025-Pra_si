@@ -1,0 +1,258 @@
+📘 20 MCQs on Java Multithreading
+1.Which term refers to doing multiple tasks at the same time in Java?
+a) Multiprogramming
+b) Concurrency
+c) Scheduling
+d) Synchronization
+Answer: b) Concurrency
+
+
+
+
+
+
+2.A thread in Java is also called:
+a) Process
+b) Lightweight process
+c) Daemon
+d) Context switcher
+Answer: b) Lightweight process
+
+
+
+
+
+
+
+3.In a single-processor system, Java achieves concurrency through:
+a) Physical concurrency
+b) Logical concurrency
+c) Multicore execution
+d) Asynchronous events
+Answer: b) Logical concurrency
+
+
+
+
+
+
+4.Which of the following provides concurrency between processes?
+a) Multithreading
+b) Multiprogramming
+c) Synchronization
+d) Thread pool
+Answer: b) Multiprogramming
+
+
+
+
+
+5.The main advantage of multithreading over multiprogramming is:
+a) Requires more overhead
+b) Cannot share resources
+c) Less processing overhead, better resource sharing
+d) Faster than all processes
+Answer: c) Less processing overhead, better resource sharing
+
+
+
+
+
+
+6.Which of the following is a real-life example of multithreaded application?
+a) Compiler
+b) Multithreaded Web Server
+c) File Explorer
+d) Notepad
+Answer: b) Multithreaded Web Server
+
+
+
+
+
+
+7.Which two are central to Java’s multithreading support?
+a) Thread class & Runnable interface
+b) Runnable & ExecutorService
+c) Object class & Process class
+d) Thread class & Future class
+Answer: a) Thread class & Runnable interface
+
+
+
+
+
+
+8.Which methods in Object class help in multithreading?
+a) start(), run(), sleep()
+b) wait(), notify(), notifyAll()
+c) execute(), join(), yield()
+d) lock(), unlock(), tryLock()
+Answer: b) wait(), notify(), notifyAll()
+
+
+
+
+
+
+
+9.Which approach restricts a class from extending another class when creating a thread?
+a) Extending Thread class
+b) Implementing Runnable interface
+c) Using ExecutorService
+d) Using Callable interface
+Answer: a) Extending Thread class
+
+
+
+
+
+
+10.Which method actually starts a thread’s execution?
+a) run()
+b) start()
+c) execute()
+d) begin()
+Answer: b) start()
+
+
+
+
+
+
+
+11.Which method must be overridden when implementing Runnable?
+a) execute()
+b) run()
+c) start()
+d) call()
+Answer: b) run()
+
+
+
+
+
+12.Which constructor creates a thread with a name and a Runnable target?
+a) Thread(String name)
+b) Thread(Runnable target)
+c) Thread(Runnable target, String name)
+d) Thread()
+Answer: c) Thread(Runnable target, String name)
+
+
+
+
+
+13.What is the main advantage of Runnable interface over extending Thread?
+a) No need to override run()
+b) Allows multiple inheritance flexibility
+c) Threads start automatically
+d) Higher priority
+Answer: b) Allows multiple inheritance flexibility
+
+
+
+
+
+
+14.A thread in the dead state means:
+a) It can be restarted
+b) It still exists as an object but can’t run again
+c) It is garbage collected
+d) It is waiting for resources
+Answer: b) It still exists as an object but can’t run again
+
+
+
+
+
+
+
+15.Which is the correct order of thread states?
+a) Ready → Waiting → Running → Dead
+b) Ready → Running → Waiting → Dead
+c) Running → Dead → Ready → Waiting
+d) Waiting → Ready → Running → Dead
+Answer: b) Ready → Running → Waiting → Dead
+
+
+
+
+
+
+
+
+
+
+16.Which method pauses execution of a thread for a given time?
+a) yield()
+b) wait()
+c) sleep()
+d) join()
+Answer: c) sleep()
+
+
+
+
+
+
+
+
+17.Which method can be used to voluntarily give up CPU control?
+a) yield()
+b) sleep()
+c) wait()
+d) join()
+Answer: a) yield()
+
+
+
+
+
+
+
+18.The default thread priority in Java is:
+a) 1 (MIN_PRIORITY)
+b) 5 (NORM_PRIORITY) // or default priority
+c) 10 (MAX_PRIORITY)
+d) 0 (system assigned)
+Answer: b) 5 (NORM_PRIORITY)
+
+
+
+
+
+
+
+
+19.Which scheduling is used by Windows JVM?
+a) Preemptive scheduling
+b) Cooperative scheduling
+c) Time slicing
+d) Priority scheduling
+Answer: c) Time slicing
+
+
+
+
+
+
+
+
+
+20.Which statement about Preemptive vs Time slicing is correct?
+a) Preemptive allows fairness to all threads
+b) Time slicing may allow selfish threads to run forever
+c) Preemptive may block low-priority threads indefinitely
+d) Time slicing ensures high-priority threads never run
+Answer: c) Preemptive may block low-priority threads indefinitely
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,2 @@
+Primitive data types are the most basic built-in data types provided by Java. They represent simple values (like numbers, characters, or truth values), not objects, and they do not have methods. They are stored directly in memory (stack).
+
