@@ -1,0 +1,55 @@
+//------------Hiarical of collection----------------------
+Collection (Interface)
+    ↓
+List (Interface)
+    ↓
+ArrayList (Class)
+
+
+
+
+
+//------Syntax of collection---------------
+Collection<Type> collectionName = new ImplementationClass<>();
+i.e Collection<String> names = new ArrayList<>();
+// ---> if type not mention then the type is byDefault OBJECT
+we can add any type value 
+
+// to add, insert , delete a value in the collection we can go through GENERIC <TYPE> i.e GENERIC
+
+// Collection doesnot work with index numbers
+
+
+
+//--------example---------
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Collection<String> names = new ArrayList<>();
+
+        names.add("Java");
+        names.add("Python");
+        names.add("C++");
+
+        System.out.println(names);  // [Java, Python, C++]
+    }
+}
+
+
+
+
+
+// // Collection doesnot work with index numbers
+To work with index number we use List(Interface)
+we can also use a -> Set<Integer> a = new HashSet<>();
+ also   Set<Integer> a = new TreeSet<>();
+ // also use map  ->  Map<Integer, String> map = new HashMap<>();
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,220 @@
+----------------📘Generics in Java (ArrayList Focused)-----------------------
+🔹 1. What are Generics?
+Generics allow you to write type-safe code in Java.
+They provide compile-time type checking and remove the need for explicit typecasting.
+Introduced in Java 5.
+
+----------Syntax:-----------------
+ClassName<Type>
+🔹 2. Problem Without Generics (Raw ArrayList)
+Before generics, collections stored objects as Object, which required manual casting.
+
+import java.util.*;
+class Demo {
+    public static void main(String[] args) {
+        ArrayList list = new ArrayList(); // Raw type (Not recommended)
+        list.add("Hello");
+        list.add(10);  // Allowed, but unsafe
+
+        // Casting needed
+        String str = (String) list.get(0); 
+        System.out.println(str);
+    }
+}
+----------- Problem:--------------------
+No compile-time error if wrong type is added.
+Runtime ClassCastException possible.
+
+
+
+
+
+
+
+
+
+🔹 3. Using Generics with ArrayList
+With generics, you can specify the type of elements stored in ArrayList.
+
+import java.util.*;
+class Demo {
+    public static void main(String[] args) {
+        ArrayList<String> names = new ArrayList<String>();
+        names.add("Alice");
+        names.add("Bob");
+        // names.add(100); ❌ Compile-time error
+
+        String first = names.get(0); // No casting required
+        System.out.println(first);
+    }
+}
+
+------------Advantages:------------
+Type safety (only String allowed).
+No explicit casting.
+Better readability.
+
+
+
+
+
+
+🔹 4. Diamond Operator (<>)
+Since Java 7, we don’t need to repeat the type on the right-hand side.
+ArrayList<Integer> numbers = new ArrayList<>(); // diamond operator
+numbers.add(10);
+numbers.add(20);
+System.out.println(numbers);
+
+
+
+
+
+
+
+
+🔹 5. Generic ArrayList with Wrapper Classes
+Primitive types (int, double, etc.) cannot be used directly in generics.
+Instead, use their Wrapper Classes:
+
+Primitive	                Wrapper Class
+int	                       Integer
+double	                   Double
+char	                     Character
+boolean	                   Boolean
+
+
+
+ArrayList<Integer> list = new ArrayList<>();
+list.add(1);   // Autoboxing (int → Integer)
+list.add(2);
+int x = list.get(0); // Unboxing (Integer → int)
+
+
+
+
+
+
+
+🔹 6. Iterating a Generic ArrayList
+Different ways to loop through ArrayList<T>:
+
+(a) Enhanced for-loop
+for (Integer num : list) {
+    System.out.println(num);
+}
+
+
+
+
+
+(b) Using Iterator
+Iterator<Integer> it = list.iterator();
+while (it.hasNext()) {
+    System.out.println(it.next());
+}
+
+
+
+
+
+(c) Using forEach + Lambda
+list.forEach(n -> System.out.println(n));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+🔹 7. Example: Custom Class with ArrayList Generics
+class Student {
+    String name;
+    int age;
+
+    Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String toString() {
+        return name + " (" + age + ")";
+    }
+}
+
+class Demo {
+    public static void main(String[] args) {
+        ArrayList<Student> students = new ArrayList<>();
+        students.add(new Student("John", 20));
+        students.add(new Student("Alice", 22));
+
+        for (Student s : students) {
+            System.out.println(s);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+🔹 8. Wildcards in Generics with ArrayList
+Sometimes you may not know the exact type. Use ? (wildcard):
+ArrayList<?> list = new ArrayList<String>();
+// list.add("Hello"); ❌ Not allowed
+<?> → Unknown type
+
+<? extends Number> → Any subclass of Number (Integer, Double, etc.)
+
+<? super Integer> → Integer or its superclasses
+
+Example:
+static void printList(ArrayList<? extends Number> list) {
+    for (Number n : list) {
+        System.out.println(n);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+🔹 9. Key Points / Summary
+Generics make ArrayList type-safe.
+Avoid raw ArrayList (without type).
+Use wrapper classes instead of primitives.
+Diamond operator (<>) reduces redundancy.
+Iteration becomes easier with generics.
+Wildcards (?) give flexibility when working with unknown types.
+
+
+
+
+----------- In short:------------
+ArrayList<T> ensures only one type T can be stored, preventing runtime errors and making code cleaner.
+
+
+

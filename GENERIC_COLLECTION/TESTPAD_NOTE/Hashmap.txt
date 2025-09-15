@@ -1,0 +1,524 @@
+📘 HashMap in Java
+🔹 1. What is a HashMap?
+HashMap is part of the Java Collections Framework.
+Stores data as key–value pairs.
+Located in java.util package.
+Implements the Map<K, V> interface.
+
+👉 Think of it like a dictionary: each word (key) maps to a meaning (value).
+
+
+
+
+
+
+
+
+🔹 2. Features of HashMap
+Key–Value storage → Each key maps to exactly one value.
+Unique keys → Duplicate keys are not allowed (latest value replaces old one).
+Duplicate values allowed.
+Null allowed → One null key and multiple null values are permitted.(The word “permitted” means “allowed” or “accepted”.)
+Unordered → HashMap does not maintain insertion order.
+Not synchronized → Not thread-safe (use Collections.synchronizedMap() for threads).
+
+
+
+
+
+
+
+
+🔹 3. Syntax
+HashMap<KeyType, ValueType> map = new HashMap<>();
+
+
+Examples:
+HashMap<Integer, String> map1 = new HashMap<>();   // Key = Integer, Value = String
+HashMap<String, Double> map2 = new HashMap<>();    // Key = String, Value = Double
+
+
+
+
+
+
+
+
+
+
+🔹 4. Common Methods
+Method	                          Description
+put(key, value)	                Insert or update a key–value pair
+get(key)	                      Returns value for the given key (or null if not found)
+remove(key)	                     Removes the entry for the key
+containsKey(key)	               Checks if key exists
+containsValue(value)	           Checks if value exists
+isEmpty()	                       Returns true if map is empty
+size()	                          Number of key–value pairs
+keySet()	                         Returns a Set of all keys
+values()	                           Returns a Collection of all values
+entrySet()	                          Returns a Set of key–value mappings
+clear()
+
+
+
+
+
+
+
+
+
+
+🔹 5. Example: Basic Usage
+import java.util.*;
+
+class HashMapDemo {
+    public static void main(String[] args) {
+        HashMap<Integer, String> map = new HashMap<>();
+
+        // Adding key–value pairs
+        map.put(1, "Apple");
+        map.put(2, "Banana");
+        map.put(3, "Orange");
+
+        // Duplicate key → value gets updated
+        map.put(2, "Mango");
+
+        // Accessing values
+        System.out.println(map.get(1));  // Apple
+        System.out.println(map.get(2));  // Mango
+
+        // Removing
+        map.remove(3);
+
+        // Iterating keys
+        for (Integer key : map.keySet()) {
+            System.out.println(key + " → " + map.get(key));
+        }
+    }
+}
+✅ Output:
+Apple
+Mango
+1 → Apple
+2 → Mango
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+🔹 6. Iterating a HashMap
+(a) Using for-each on entrySet()
+for (Map.Entry<Integer, String> entry : map.entrySet()) {
+    System.out.println(entry.getKey() + " → " + entry.getValue());
+}
+(b) Using forEach (Java 8+)
+java
+Copy code
+map.forEach((key, value) -> 
+    System.out.println(key + " → " + value)
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+🔹 7. Null Keys and Values
+HashMap<String, String> map = new HashMap<>();
+map.put(null, "First");   // null key allowed
+map.put("A", null);       // null value allowed
+map.put("B", null);
+System.out.println(map);
+Output:
+{null=First, A=null, B=null}
+
+
+
+
+
+
+
+
+
+🔹 8. HashMap vs TreeMap vs LinkedHashMap
+Feature        	HashMap	                         LinkedHashMap	                               TreeMap
+Ordering	      No order	                    Maintains insertion order	                   Sorted by keys
+Null Keys  	1 allowed	                            1 allowed	                               Not allowed
+Speed	Fast  (O(1) average)	                  Slightly slower	                            Slower (O(log n))
+
+
+
+
+
+
+
+
+
+🔹 9. Common Use Cases
+Storing student ID → Name
+
+Caching (key = data, value = cached result)
+
+Counting frequency of words/characters
+
+Representing relationships (like username → email)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+🔹 10. Example: Word Frequency Counter
+import java.util.*;
+
+class WordCount {
+    public static void main(String[] args) {
+        String text = "apple banana apple orange banana apple";
+        HashMap<String, Integer> freq = new HashMap<>();
+
+        for (String word : text.split(" ")) {
+            freq.put(word, freq.getOrDefault(word, 0) + 1);
+        }
+
+        System.out.println(freq);
+    }
+}
+
+
+✅ Output:
+{orange=1, banana=2, apple=3}
+🔹 11. Key Points Summary
+HashMap<K,V> stores unique keys and values as pairs.
+Very fast lookup (average O(1)).
+Allows 1 null key and many null values.
+Keys are hashed → no order guaranteed.
+Useful for mapping relationships and counting.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+📘------------------- Java HashMap – Interview/Exam Q&A--------------------------
+🔹 1. Basic Questions
+Q1. What is a HashMap in Java?
+A HashMap is part of java.util package.
+Stores data as key–value pairs.
+Keys must be unique, values can be duplicate.
+Average time complexity for get() and put() is O(1).
+
+
+
+
+
+
+
+
+Q2. Difference between HashMap and Hashtable?
+Feature	                                   HashMap	                                                              Hashtable
+Synchronization	                       Not synchronized (faster)	                                         Synchronized (thread-safe)
+Nulls                                allowed	1 null key, multiple null values	                          No null key, no null values
+Performance	                                    Faster	                                                        Slower
+Legacy?	                                   Modern (Java 1.2)	                                          Legacy (Java 1.0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q3. Can HashMap have duplicate keys?
+👉 No. Keys must be unique. If you put a duplicate key, it replaces the old value.
+HashMap<Integer, String> map = new HashMap<>();
+map.put(1, "A");
+map.put(1, "B");
+System.out.println(map); // {1=B}
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q4. Can HashMap have duplicate values?
+👉 Yes. Multiple keys can map to the same value.
+map.put(2, "B");
+System.out.println(map); // {1=B, 2=B}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q5. Can HashMap have null keys and values?
+Yes, one null key allowed.
+Multiple null values allowed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+🔹 2. Iteration Questions
+Q6. How do you iterate over a HashMap?
+✅ Three main ways:
+(a) Using entrySet():
+for (Map.Entry<Integer, String> entry : map.entrySet()) {
+    System.out.println(entry.getKey() + " → " + entry.getValue());
+}
+
+
+
+
+
+
+
+
+
+(b) Using keySet():
+for (Integer key : map.keySet()) {
+    System.out.println(key + " → " + map.get(key));
+}
+
+
+
+(c) Using forEach (Java 8+):
+map.forEach((k, v) -> System.out.println(k + " → " + v));
+🔹 3. Conceptual Questions
+
+
+
+
+
+
+
+
+
+
+
+Q7. How does HashMap work internally?
+Uses hashing.
+Each key’s hashCode() determines bucket location.
+If multiple keys hash to same bucket → stored in LinkedList / Tree (collision handling).
+Since Java 8, buckets with many collisions use balanced trees (O(log n)).
+
+
+
+
+
+
+
+
+Q8. What is the default capacity and load factor of HashMap?
+Capacity = 16 (number of buckets).
+Load Factor = 0.75 (when 75% full, it resizes).
+
+
+
+
+
+
+
+Q9. What is the time complexity of operations?
+Operation	Average	Worst Case
+get()	O(1)	O(log n) (if collisions)
+put()	O(1)	O(log n)
+remove()	O(1)	O(log n)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q10. Difference between HashMap, LinkedHashMap, and TreeMap?
+Feature	HashMap	LinkedHashMap	TreeMap
+Ordering	No order	Insertion order	Sorted by keys
+Null Keys	1 allowed	1 allowed	Not allowed
+Performance	Fastest	Slightly slower	Slower (O(log n))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+🔹 4. Coding/Logic Questions
+Q11. Program to count frequency of characters in a string using HashMap.
+String s = "banana";
+HashMap<Character, Integer> map = new HashMap<>();
+
+for (char c : s.toCharArray()) {
+    map.put(c, map.getOrDefault(c, 0) + 1);
+}
+
+System.out.println(map); // {a=3, b=1, n=2}
+Q12. Program to find the first non-repeated character in a string.
+
+java
+Copy code
+String s = "swiss";
+HashMap<Character, Integer> map = new HashMap<>();
+
+for (char c : s.toCharArray()) {
+    map.put(c, map.getOrDefault(c, 0) + 1);
+}
+
+for (char c : s.toCharArray()) {
+    if (map.get(c) == 1) {
+        System.out.println("First non-repeated: " + c);
+        break;
+    }
+}
+
+
+
+
+
+
+
+
+
+Q13. How to sort a HashMap by keys or values?
+👉 By default, HashMap is unordered. Use TreeMap or streams.
+
+Sort by keys:
+Map<Integer, String> sorted = new TreeMap<>(map);
+Sort by values (Java 8+):
+
+map.entrySet()
+   .stream()
+   .sorted(Map.Entry.comparingByValue())
+   .forEach(System.out::println);
+🔹 5. Summary Sheet (Exam Quick Look)
+HashMap<K,V> → stores key–value pairs.
+
+Keys unique, values can duplicate.
+
+Null → one key, many values.
+
+Average O(1) for get/put.
+
+Default capacity = 16, load factor = 0.75.
+
+Not synchronized (use ConcurrentHashMap in multithreading).
+
+Iteration → entrySet(), keySet(), forEach.
+
+
+
+
+
+
+

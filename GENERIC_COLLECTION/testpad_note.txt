@@ -1,0 +1,10 @@
+-----------Formal Type Parameter Naming Convention------------
+Use an uppercase single-character for formal type parameter. For example,
+<E> for an element of a collection;
+<T> for type;
+<K, V> for key and value.
+<N> for number
+S,U,V, etc. for 2nd, 3rd, 4th type parameters
+
+
+

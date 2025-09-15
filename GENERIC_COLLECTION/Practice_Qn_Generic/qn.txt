@@ -1,0 +1,6 @@
+Practice Questions 
+Q1. Print Elements from Any Type of Array
+Q2. Check if Two Values Are Equal
+Q3. Swap Two Elements in an Array
+Q4. Count Occurrences of an Element
+
