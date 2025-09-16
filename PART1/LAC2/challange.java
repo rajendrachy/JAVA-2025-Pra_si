@@ -11,3 +11,4 @@ public class challange {
 // ----------Print start in the simple Way :  --------------
 // Link-> System.out.print("*");
 // System.out.print("* *");
+

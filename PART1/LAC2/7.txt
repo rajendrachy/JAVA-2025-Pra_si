@@ -1,0 +1,3 @@
+In Java, the anatomy of a class means the structure or building blocks that make up a class.
+
+
