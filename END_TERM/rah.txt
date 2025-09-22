@@ -1,0 +1,38 @@
+a) Bitwise operators – 1 question from Testpad (100% according to sir)
+b) 1D Array – practice from Portal
+c) String:
+
+1.Reverse (character by character or word by word)
+
+2.Palindrome words
+
+3.Compress/expand/count frequency
+
+4.Remove duplicates
+
+5.K-position rotation
+
+d) Class and object – practice the types of questions that were asked in ST1 and ST2 according to sir
+
+
+
+for 2D arra
+
+A parking lot is represented as a 2D array with 3 rows and 5 columns (total 15 parking slots).
+Each slot is marked as:
+1 → Car already parked
+0 → Slot is empty (available for parking)
+
+Tasks:
+
+Print the current parking lot grid in matrix form.
+
+Find and display the number of available parking slots in each row.
+
+Find the total number of available parking slots in the entire lot.
+
+Display the row which has the maximum number of available slots.
+
+If the parking lot is completely full (no 0), display "Parking Lot Full".
+
+this type of question may asked according to sir haii
