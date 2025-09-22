@@ -42,16 +42,18 @@ Write a program to calculate the total salary of a General Manager and display a
 
 
 Q5. Bank and Accounts
-
 A bank has different types of accounts.
-
 Create a base class Account with fields: accountNo, balance and methods deposit() and withdraw().
-
 Derive a class SavingAccount with an additional field interestRate.
-
 Derive a class FixedDeposit with timePeriod and a method calculateMaturityAmount().
-
 Write a program to create accounts and display details.
+
+
+
+
+
+
+
 
 Q6. Vehicle and Car
 
